@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 
-export const handler = async (req, res) => {
-	const { url } = req
+export const handler = async event => {
+	// const { url } = req
 
 	// const template = await fs.readFile(`../dist/client/index.html`, 'utf-8')
 	// const manifest = await fs.readFile(
@@ -13,7 +13,8 @@ export const handler = async (req, res) => {
 
 	// const appHtml = await render(url, manifest)
 
-	console.log(`URL`, url)
+	console.log(`EVENT`, event)
+	return { event }
 	// console.log(`Template`, template)
 	// const html = template
 	// 	.replace(`<!--app-head-->`, appHtml.head ?? '')
