@@ -18,6 +18,7 @@ export default async function handler(req, res) {
 		.replace(`<!--app-head-->`, appHtml.head ?? '')
 		.replace(`<!--app-html-->`, appHtml.html ?? '')
 
+	res.statusCode = 200
 	res.setHeader(`Content-Type`, 'text/html')
 	res.end(html)
 }
