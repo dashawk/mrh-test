@@ -14,7 +14,10 @@ export const handler = async event => {
 	// const appHtml = await render(url, manifest)
 
 	console.log(`EVENT`, event)
-	return { event }
+	return {
+		statusCode: 200,
+		body: JSON.stringify({ event })
+	}
 	// console.log(`Template`, template)
 	// const html = template
 	// 	.replace(`<!--app-head-->`, appHtml.head ?? '')
