@@ -1,13 +1,22 @@
 import { Outlet, useNavigation } from 'react-router-dom'
-import BaseLayout from './BaseLayout'
+import Footer from '../templates/Footer/Footer'
+import Header from '../templates/Header'
+
+import Loading from '../utilities/Loading'
 
 const DefaultLayout = () => {
 	const navigation = useNavigation()
 
+	if (navigation.state !== 'idle') {
+		return <Loading />
+	}
+
 	return (
-		<BaseLayout className='layout-default'>
+		<div className='wrapper layout-default'>
+			<Header />
 			<Outlet />
-		</BaseLayout>
+			<Footer />
+		</div>
 	)
 }
 

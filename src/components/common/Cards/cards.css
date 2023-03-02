@@ -1,0 +1,23 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cards .col {
+  padding: 0;
+}
+
+.card-item {
+  margin-bottom: 60px;
+  transition: all 0.3s ease 0s;
+}
+
+.card-item .card-item-info {
+  padding: 26px 15px 10px;
+  background: #F5F5F5 none repeat scroll 0 0;
+}
+
+.card-item .card-item-image img {
+  width: 100%;
+}
